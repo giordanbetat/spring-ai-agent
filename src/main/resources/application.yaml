@@ -1,0 +1,19 @@
+spring:
+  ai:
+    chat.memory.repository.jdbc.schema: classpath:/schema/schema-h2db.sql
+    chat.memory.repository.jdbc.initialize-schema: always
+  profiles.active: local
+  application:
+    name: spring-ai-agent
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus,info
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  tracing:
+    sampling:
+      probability: 1.0
