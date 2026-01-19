@@ -19,6 +19,7 @@ spring:
       base-url: http://localhost:11434
       chat:
         options:
+          temperature: ${chat.client.temperature}
           model: ${chat.client.modelName}
     vectorstore.qdrant:
         initialize-schema: true
@@ -26,10 +27,13 @@ spring:
         port: 6334
         collection-name: vector_store
 
+github:
+  baseUrl: https://api.github.com
+
 chat:
   client:
-    modelName: "llama3.2:1b"
-    temperature: 0.7
+    modelName: "qwen2.5:3b"
+    temperature: 0.0
     maxTokens: 500
     topK: 3
     maxMessages: 10

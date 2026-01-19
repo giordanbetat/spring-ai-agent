@@ -1,5 +1,11 @@
-User Question: {user_message}
+CONTEXT INFORMATION (RAG):
+---------------------
+{context}
+---------------------
 
----
-IMPORTANT FINAL INSTRUCTION:
-Regardless of the language of the provided Context or the User Question, you MUST answer in {language}.
+USER QUESTION:
+{user_message}
+
+INSTRUCTIONS:
+1. If the user asks for external libraries or projects, YOU MUST USE THE TOOL provided.
+2. Otherwise, use the Context or your knowledge.
