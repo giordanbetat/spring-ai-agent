@@ -19,7 +19,6 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("DevLifeline API - Career & Health Mentor")
                         .version("1.0.0-POC")
-                        .description("API do Assistente de IA focado em Carreira de Engenharia de Software e Saúde Ocupacional (Ergonomia/Treino).")
                         .contact(new Contact()
                                 .name("Tech Lead Team")
                                 .email("tech@devlifeline.com")
@@ -32,10 +31,10 @@ public class SwaggerConfig {
                         List.of(
                                 new Server()
                                         .url("http://localhost:8080")
-                                        .description("Servidor Local"),
+                                        .description("Local Server"),
                                 new Server()
                                         .url("https://api.devlifeline.com")
-                                        .description("Servidor de Produção (Simulado)")
+                                        .description("Production Server (Simulation)")
                         ));
     }
 }
